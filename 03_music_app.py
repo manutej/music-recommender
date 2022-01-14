@@ -11,7 +11,7 @@ def open_pickles():
         artist_df = pickle.load(f2)
     return artist_df
 artist_df = open_pickles()
-
+#artist = "the beatles"
 def process_artist(artist_name):
     return artist_name.replace(" ","+")
 
@@ -50,6 +50,10 @@ with st.form('scrivener'):
             st.subheader(artist)
             st.write(get_headline(artist_json))
 
+
+        #st.write(top10)
     if len(artist) == 0:
       st.write('You must include an artist in the input for recommendation.')
     
+      #pred = model.predict([txt])[0]
+      #st.write('You write like', pred)
