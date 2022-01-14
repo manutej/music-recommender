@@ -3,14 +3,14 @@ import streamlit as st
 import pickle
 import pandas as pd
 
-@st.cache(show_spinner=False)
+#@st.cache(show_spinner=False)
 def open_pickles():
-    #with open('dict.pkl','rb') as f:
-        #artist_dict = pickle.load(f)
-    with open('artist_df.pkl','rb') as f2:
-        artist_df = pickle.load(f2)
-    return artist_df
-artist_df = open_pickles()
+    with open('dict.pkl','rb') as f:
+        artist_dict = pickle.load(f)
+    #with open('artist_df.pkl','rb') as f2:
+        #artist_df = pickle.load(f2)
+    return artist_dict
+artist_dict = open_pickles()
 
 def process_artist(artist_name):
     return artist_name.replace(" ","+")
@@ -40,10 +40,11 @@ with st.form('scrivener'):
 
     if st.form_submit_button('Analyze!'):
         txt = artist.lower().strip()
-        #st.write('The current artist selected is', artist)
+        
         st.write('Here are the top 10 related artists for your selection of ', artist.capitalize())
-        #top10 = [st.write(art) for art in artist_dict[txt]['top10']]
-        top10 = list(artist_df.loc[txt,'top10'].index)
+        
+        top10 = [art for art in list(artist_dict[txt]['top10'].keys())]
+
         for artist in top10:
             
             artist_json = get_json(artist)
