@@ -2,7 +2,7 @@
 
 # Music Recommender System
 
-## Music Recommender System Project using Last.FM dataset
+## Music Recommender System Project published on Streamlit
 
 ### Purpose: 
 
