@@ -4,9 +4,9 @@
 
 ## Music Recommender System Project using Last.FM dataset
 
-### The Challenge: 
+### Purpose: 
 
-The challenge for this project was to develop a comprehensive music recommender system that is able to take in an input of an artist and generate 10 similar recommendations of musical artists. The recommender system will be a collaborative filtering recommender model that uses information about the number of plays for certain artists across users served in a web application. This is an application of machine learning that allows discovery of new musical artists based on existing data. 
+The goal for this project was to develop a comprehensive music recommender system that is able to take in an input of an artist and generate 10 similar recommendations of musical artists. The recommender system will be a collaborative filtering recommender model that uses information about the number of plays for certain artists across users served in a web application. This is an application of machine learning that allows discovery of new musical artists based on existing data. 
 
 
 ## File Structure
